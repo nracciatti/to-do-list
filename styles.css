@@ -21,11 +21,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 35px;
 }
 
 .add-form {
   display: flex;
+  gap: 20px;
+}
+
+.search-img {
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -50,7 +60,7 @@ body {
   cursor: pointer;
   padding: 10px 15px;
   color: #fafafa;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 10px;
   background: #fc4a1a; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -91,8 +101,9 @@ body {
   padding: 10px 116px;
   margin: 10px;
   border: 3px solid white;
+  border-radius: 20px 0px 20px 0px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 180px;
 }
 
@@ -117,4 +128,10 @@ body {
 
 .hidden {
   visibility: hidden;
+}
+
+.delete-btn {
+  width: 20px;
+  margin-left: 75px;
+  cursor: pointer;
 }

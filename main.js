@@ -5,7 +5,7 @@ const deleteAllBtn = document.querySelector(".delete-all");
 
 let tasks = JSON.parse(localStorage.getItem("tareas")) || [] // || = o [] = array vacio;
 
-let id= 0;
+let Id= 0;
 
 const hideDeleteAllBtn = (tasksList) => {
     if(!tasks.length) {
@@ -23,7 +23,7 @@ const saveToLocalStorage = (tasksList) => {
 }
 
 const renderList = (list) => {
-    tasksList.innerHTML = list.map((task) => "<li>" + task.name + "</li>").join("");
+    tasksList.innerHTML = list.map((task) => `<li> ${task.name} <img src= "./img/delete-button.svg" alt= "Boton para borrar tarea" class= "delete-btn" data-id= ${task.taskId} </li>`).join("");
 }
 
 // E =  EVENTO 
