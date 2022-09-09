@@ -2,10 +2,10 @@ const input = document.querySelector(".input-text");
 const addForm = document.querySelector(".add-form");
 const tasksList = document.querySelector(".tasks-list"); // <ul></ul>
 const deleteAllBtn = document.querySelector(".delete-all");
+// const deleteBtn = document.querySelector(".delete-btn");
 
 let tasks = JSON.parse(localStorage.getItem("tareas")) || [] // || = o [] = array vacio;
 
-let Id= 0;
 
 const hideDeleteAllBtn = (tasksList) => {
     if(!tasks.length) {
@@ -51,15 +51,31 @@ const taskName = input.value.trim();
     }
 };
 
+deleteTask = (e) => {
+    //Nos preguntamos:
+    // Si la lista de clases de lo que estoy apretando contiene la clase delete-btn.
+    if (!e.target.classList.contains("delete-btn")) {
+        return;
+    }
+
+    
+
+    //TODO borrar la tarea de la lista
+    //Borrarla de localstorage
+    //Pintar la lista nueva
+}
+
+
 deleteAll = () => {
 
 }
 
 const init = () => {
     renderList(tasks);
-    addForm.addEventListener("submit", addTask)   
-    deleteAllBtn.addEventListener("click", deleteAll)
-    hideDeleteAllBtn(tasks)
+    addForm.addEventListener("submit", addTask);   
+    tasksList.addEventListener("click", deleteTask);
+    deleteAllBtn.addEventListener("click", deleteAll);
+    hideDeleteAllBtn(tasks);
 
     //Cuando esto se submitea, ejecuta la funcion addTask la cual se encarga de validar que hayas escrito algo, y en caso de que hayas escrito algo se va a cumplir la funcion saveToLocalStorage, la cual se encarga de guardar lo que se ingrese en el localStorage. 
 };
