@@ -6,7 +6,8 @@
 }
 
 body {
-  background: #242424;
+  background: linear-gradient(to right, #6dd5ed, #157e98);
+
   color: #fafafa;
   display: flex;
   justify-content: center;
@@ -63,16 +64,30 @@ body {
   color: #fafafa;
   border: 2px solid white;
   border-radius: 10px;
-  background: #fc4a1a; /* fallback for old browsers */
+  background: #000046; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    to left,
-    #f7b733,
-    #fc4a1a
+    to right,
+    #000046,
+    #1cb5e0
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to left,
-    #f7b733,
-    #fc4a1a
+    to right,
+    #000046,
+    #1cb5e0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.add-btn:hover {
+  background: #000046; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1cb5e0,
+    #000046
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1cb5e0,
+    #000046
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -88,17 +103,18 @@ body {
 }
 
 .tasks-list li {
-  background: #fc4a1a; /* fallback for old browsers */
+  background: #000046; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    to left,
-    #f7b733,
-    #fc4a1a
+    to right,
+    #000046,
+    #1cb5e0
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to left,
-    #f7b733,
-    #fc4a1a
+    to right,
+    #000046,
+    #1cb5e0
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   padding: 10px 116px;
   margin: 10px;
   border: 3px solid white;
@@ -114,16 +130,16 @@ body {
   border-radius: 10px;
   cursor: pointer;
   margin-top: 20px;
-  background: #fc4a1a; /* fallback for old browsers */
+  background: #000046; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    to left,
-    #f7b733,
-    #fc4a1a
+    to right,
+    #000046,
+    #1cb5e0
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to left,
-    #f7b733,
-    #fc4a1a
+    to right,
+    #000046,
+    #1cb5e0
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 

@@ -37,9 +37,9 @@ const addTask = (e) => {
 
   const taskName = input.value.trim();
 
-  if (taskName.length === 0 /* o !taskName.length*/) {
+  if (!taskName.length /* o taskName.length === 0*/) {
     console.log("Por favor escriba algo.");
-    alert("Por favor escriba algo.");
+    // alert("Por favor escriba algo.");
   } else if (
     tasks.some((task) => task.name.toUpperCase() === taskName.toUpperCase())
   ) {
@@ -79,7 +79,7 @@ const deleteTask = (e) => {
 };
 
 const deleteAll = () => {
-  task = [];
+  tasks = [];
 
   saveToLocalStorage(tasks);
   renderList(tasks);
